@@ -27,6 +27,11 @@ app.use(cookieParser());
 import userRoutes from "./routes/user.routes.js";
 import accountRoutes from "./routes/account.routes.js";
 
+// Test route
+app.get("/", (req, res) => {
+    res.send("Welcome to CashFlow, Server is running fine!");
+});
+
 // Route declaration
 app.use("/api/v1/users", userRoutes)
 app.use("/api/v1/account", accountRoutes)
